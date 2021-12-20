@@ -110,7 +110,7 @@ namespace IdentityTest.Controllers
                 );
                 return Ok(new
                 {
-                    token = new JwtSecurityTokenHandler().WriteToken(token).ToString(),
+                    token = new JwtSecurityTokenHandler().WriteToken(token),
                     expiration = token.ValidTo
                 });
             }
